@@ -1,0 +1,4 @@
+
+host *
+  UserKnownHostsFile /dev/null 
+  StrictHostKeyChecking no
