@@ -11,7 +11,7 @@ RUN wget  http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.
 RUN tar -xzf mysql-connector-java-5.1.37.tar.gz
 RUN mv /mysql-connector-java-5.1.37/mysql-connector-java-5.1.37-bin.jar /usr/local/sqoop/lib
 RUN echo "export SQOOP_HOME=/usr/local/sqoop" >> $HOME/.bashrc  && \
-    echo "export PATH=$PATH:$SQOOP_HOME/bin">> $HOME/.bashrc
+    echo "export PATH=$PATH:$SQOOP_HOME/bin:$HADOOP_HOME/bin">> $HOME/.bashrc
 RUN  mv /usr/local/sqoop/conf/sqoop-env-template.sh /usr/local/sqoop/conf/sqoop-env.sh
 RUN echo "export HADOOP_COMMON_HOME=/opt/hadoop" >> /usr/local/sqoop/conf/sqoop-env.sh  && \
      echo "export HADOOP_MAPRED_HOME=/opt/hadoop" >> /usr/local/sqoop/conf/sqoop-env.sh
